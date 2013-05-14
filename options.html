@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title>ShareToSave - Settings</title>
+	<link rel="icon" type="image/ico" href="favicon.ico">
+</head>
+<script src="options.js"></script>
+<style type="text/css">
+	@font-face{
+	    font-family: "Rambla";
+	    src: url(Rambla-Regular.ttf) format("truetype");
+	}
+
+	body{
+		width:700px;
+		background:url('billie_holiday.png');
+		font-family:"Rambla";
+	}
+
+	ul{
+		margin:0px;
+		padding:0px;
+		list-style-type:none;
+	}
+
+	.loginNest{
+		width:600px;
+		margin:auto;
+		margin-top:130px;
+		padding:20px;
+	}
+
+	.signupLink{
+		margin-bottom:20px; 
+	}
+
+	.dwn{
+		margin:20px 0px 0px 0px;
+	}
+</style>
+<body>
+<div class="loginNest">
+	<div id="share2saveLogin">
+		<ul>
+			<li>Please enter your email address and password</li>
+			<li class="signupLink"><a href="https://slimdowndesign.com/chrome_extensions/sharetosave_v2/sharetosave_server/SignUp.php">Sign Up</a></li>
+			<li>Email</li>
+			<li><input type="text" name="email" id="email"></li>
+			<li>Password</li>
+			<li><input type="password" name="password" id="password"></li>
+			<li><button id="save">Save</button></li>
+		</ul>
+	</div>
+
+	<div id="status">
+	</div>
+
+	<div class="dwn">
+		<a id="getMyBM">Download my Bookmarks</a>
+	</div>
+</body>
+</html>
