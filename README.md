@@ -1,7 +1,7 @@
 gmailRSA
 ========
 
-A chrome extension for RSA encryptions of form elements on the fly.
+A chrome extension for the RSA encryption of form elements on the fly.
 
 
 
