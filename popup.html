@@ -1,12 +1,31 @@
 <!DOCTYPE html>
+<!-- http://www.ohdave.com/rsa/ -->
 <html style=''>
 <head>
-<script src='ohDave/BigInt.js'></script>
+<script src="jquery.min.js"></script>
+<!-- <script src='ohDave/BigInt.js'></script>
 <script src='ohDave/Barret.js'></script>
 <script src='ohDave/RSA.js'></script>
+<script src="ohDave/example.js"></script> -->
 <script src='popup.js'></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	alert("jquery");
+	// $('#encButt').click(function(){
+	// 	$('#txtMessages').val("trying");
+	// });
+});
+</script>
 </head>
 <body style="width:400px;">
 	<div id='message'>Grabbing Data...</div>
+	<input type="hidden" name="txtPlaintext" id="txtPlaintext" value="23">
+	<input type="button" value="encrypt" id="encButt">
+	<form name="frm">
+		<textarea name="txtCiphertext"></textarea>
+		<textarea name="txtMessages" id="txtMessages"></textarea>
+		<textarea name="txtVerification"></textarea>
+	</form>
+
 </body>
 </html>

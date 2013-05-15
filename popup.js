@@ -9,10 +9,8 @@ chrome.extension.onMessage.addListener(function(request, sender) {
     for(var ii=(beginEncrypt+beginDelim.length); ii<endEncrypt; ii++){
     	messageContent += content.charAt(ii);
     }
-
-    // message.innerText = beginEncrypt+"--"+endEncrypt;
-    keyPair = new RSAKeyPair(23, 32, 7);
-    message.innerText = encryptedString(keyPair, messageContent);
+	document.getElementById("txtPlaintext").value = messageContent;
+	message.innerText = "hello";
   }
 });
 
@@ -32,3 +30,4 @@ function onWindowLoad() {
 
 
 window.onload = onWindowLoad;
+
