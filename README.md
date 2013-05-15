@@ -15,7 +15,7 @@ and replaces the existing page contents with the encrypted version. More delimit
 The contents of the message are sent over whichever communications channel (AIM, GMAIL, GChat),
 where it can be decrypted by the reverse of the above described process.
 
-The only problem is the secure storage of the private hey on the local host machine. 
+The only problem is the secure storage of the private key on the local host machine. 
 
 
 
