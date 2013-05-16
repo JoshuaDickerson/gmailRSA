@@ -1,31 +1,49 @@
 <!DOCTYPE html>
 <!-- http://www.ohdave.com/rsa/ -->
-<html style=''>
+<html>
 <head>
+<style type="text/css">
+ul{
+	list-style-type:none;
+}
+</style>
 <script src="jquery.min.js"></script>
-<!-- <script src='ohDave/BigInt.js'></script>
-<script src='ohDave/Barret.js'></script>
-<script src='ohDave/RSA.js'></script>
-<script src="ohDave/example.js"></script> -->
+<script src="ohDave/BigInt.js.pagespeed.jm.hx6Bwb3Na9.js"></script>
+<script src="ohDave/bt.js"></script>
+<script src="ohDave/r_s_a.js"></script>
 <script src='popup.js'></script>
 <script type="text/javascript">
-$(document).ready(function(){
-	alert("jquery");
-	// $('#encButt').click(function(){
-	// 	$('#txtMessages').val("trying");
-	// });
-});
+// alert("working");
+// $(document).ready(function(){
+// 	$('#encryptButt').click(function(){
+// 		// cmdEncryptClick();
+// 		$('#txtMessages').append("hello");
+// 	});
+// 	// $('#decryptButt').click(function(){
+// 	// 	cmdVerifyClick();
+// 	// });
+// });
 </script>
 </head>
 <body style="width:400px;">
 	<div id='message'>Grabbing Data...</div>
-	<input type="hidden" name="txtPlaintext" id="txtPlaintext" value="23">
-	<input type="button" value="encrypt" id="encButt">
-	<form name="frm">
-		<textarea name="txtCiphertext"></textarea>
-		<textarea name="txtMessages" id="txtMessages"></textarea>
-		<textarea name="txtVerification"></textarea>
+	<form name="rsame">
+		<input type="hidden" name="txtPlaintext" id="txtPlaintext" value="23">
+		<ul>
+			<li>Ciphertext</li>
+			<li><textarea name="txtCiphertext" id="txtCiphertext"></textarea></li>
+			<li>Messages</li>
+			<!-- <li><textarea name="txtMessages" id="txtMessages"></textarea></li> -->
+			<li><textarea name="txtMessages" id="txtMessages"></textarea></li>
+			<li>Verify</li>
+			<li><textarea name="txtVerification"></textarea></li>
+			<li>
+				<input type="button" value="encrypt" name="encryptButt" id="encryptButt">
+				<input type="button" value="decrypt" name="decryptButt" id="decryptButt">
+		</ul>
 	</form>
+
+
 
 </body>
 </html>

@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <link rel="stylesheet" type="text/css" href="example.css">
-<script language="JavaScript" src="http://www.ohdave.com/rsa/BigInt.js.pagespeed.jm.hx6Bwb3Na9.js"></script>
+<script language="JavaScript" src="BigInt.js.pagespeed.jm.hx6Bwb3Na9.js"></script>
 <script src="bt.js"></script>
 <script src="r_s_a.js"></script>
 <script language="Javascript">
@@ -13,7 +13,8 @@ function createKey(){
 	var index=f.selKeySize.selectedIndex;
 	var keySize=Number(f.selKeySize.options[index].value);
 	if(keySize==128){
-		setMaxDigits(19);key=new RSAKeyPair("10001","202700adbd85e2d7182720c3a0ee19c1","30db31542ace0f7d37a629ee5eba28cb");
+		setMaxDigits(19);
+		key=new RSAKeyPair("10001","202700adbd85e2d7182720c3a0ee19c1","30db31542ace0f7d37a629ee5eba28cb");
 	}else if(keySize==256){
 		setMaxDigits(38);
 		key=new RSAKeyPair("10001","8064edb1f26944f6bec2b68789db7ffd08b074d0953b76feca71dc8265c60e9","2687f5ac6c70f9cab32fcbded7059502f4c7cc95fc3e09a560c68975ac4bf5e3");
@@ -27,10 +28,10 @@ function createKey(){
 		setMaxDigits(260);
 		key=new RSAKeyPair("10001","409c6fe2b6474762b5c07f4e55ef80d174814dc1fb0fb58e979691116fb3dc433f759ff8a88d1a0f0666862b0b3758c54b7355fa87ee827369381e1f97c5d74944e032c7186b51a956fb49d6deb3aee0b2c7e65fc53bfd46d217764850667ed0363de143f3f3d06d5a0018693ad3dacdf78a18d037ceeccb7508776f27b30852b8b505666a8dca5bfbb455d2f85918f8b5295061c97673c78802c5f5cf4581c7215dc32af8dfb6fc10e9ba51fb5a88abab94157ccecf615e104a91a45e9bee072fe7b388344c1bbad4a8f7d5daeccbadf778d59eff2a491a067bba5343c5a094c61b575fe367ecfcc01c3d208c2f8c05b9496a929b2b72e70160d07d07f248f1","9800012b1e533c2c28187424e1289fd4f7fe67487058f5ac7f27f18476c6c93db20b6d2c63d04ff310c1e7211cf8014adc006176529abc53fd1780274fc2629cf51d627c7465c3cbf4f110c3560e2128b97c4ea8a431f0b2a326fc31899790515ad45874ca75c68ee6695558736490ea895d598b8525bccab3156104d360b115ae25e99e9d899a2219136bad0336eeee0c6d725aa9c3b6b923c1ad95a9057b9deb7b563e05614acc800d9d8ec5de405d74feea722c5146feb80829508180ab5c80bf792b83f07c04c73ce0b3cf0d9f74aa92a4704819d103e58f5d4b8ca750148ba1cbab8eb55f92775b18da427c3a0b592809f3853274841a44b7129ec6a623");
 	}
+	return key;
 }
 function bodyLoad(){
-	createKey();
-	key=new RSAKeyPair("5ABB","01146BD07F0B74C086DF00B37C602A0B","01D7777C38863AEC21BA2D91EE0FAF51");
+	key = createKey();
 	var f=document.frm;
 	f.selRadix.selectedIndex=key.radix-2;
 }
@@ -42,7 +43,8 @@ function cmdShowKeyClick(){
 }
 function cmdEncryptClick(){
 	with(document.frm){
-		txtMessages.value="Encrypting. Please wait...";txtCiphertext.value="";
+		txtMessages.value="Encrypting. Please wait...";
+		txtCiphertext.value="";
 		txtVerification.value="";
 		var t1=new Date().getTime();
 		txtCiphertext.value=encryptedString(key,txtPlaintext.value);
